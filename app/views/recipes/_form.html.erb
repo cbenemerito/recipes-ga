@@ -15,10 +15,22 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+
+  <div class="field">
+    Ingredients
+    <ul>
+      <%= f.fields_for :recipe_ingredients do |ri| %>
+        <li><%= ri.text_field :quantity %> - 
+        <%= ri.text_field :ingredient_name %></li>
+      <% end %>
+    </ul>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
