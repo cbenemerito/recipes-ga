@@ -1,4 +1,6 @@
 RecipesGa::Application.routes.draw do
+  resources :users
+
   resources :recipe_ingredients
 
   resources :recipes
