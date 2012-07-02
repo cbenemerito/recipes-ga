@@ -77,7 +77,7 @@ class RecipeIngredientsController < ApplicationController
     @recipe_ingredient.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipe_ingredients_url }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end

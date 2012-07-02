@@ -39,6 +39,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1/edit
   def edit
     @recipe = Recipe.find(params[:id])
+    @recipe.recipe_ingredients.build
   end
 
   # POST /recipes

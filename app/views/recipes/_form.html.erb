@@ -25,8 +25,10 @@
     Ingredients
     <ul>
       <%= f.fields_for :recipe_ingredients do |ri| %>
-        <li><%= ri.text_field :quantity %> - 
-        <%= ri.text_field :ingredient_name %></li>
+        <li>
+          <%= ri.label :quantity %><%= ri.text_field :quantity %> - 
+          <%= ri.label :ingredient %><%= ri.text_field :ingredient_name %>
+        </li>
       <% end %>
     </ul>
   </div>

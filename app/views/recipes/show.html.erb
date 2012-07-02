@@ -14,7 +14,12 @@
 	<b>Ingredients:</b>
 	<ul>
 		<% @recipe.recipe_ingredients.each do |ri| %>
-			<li><%= ri.ingredient.name %> - <%= ri.quantity %></li>
+			<li>
+				<%= ri.ingredient.name %> - <%= ri.quantity %> 
+				- 
+				<%= link_to 'Delete', ri, confirm: 'Are you sure?', method: :delete %>
+
+			</li>
 		<% end %>
 	</ul>
 
