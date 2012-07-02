@@ -27,6 +27,8 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @recipe.recipe_ingredients.build
+    @recipe.recipe_ingredients.build
+    @recipe.recipe_ingredients.build
 
     respond_to do |format|
       format.html # new.html.erb
