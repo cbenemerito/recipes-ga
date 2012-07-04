@@ -3,7 +3,7 @@ RecipesGa::Application.routes.draw do
 
   post "login" => "sessions#create"
 
-  get "sessions/destroy"
+  get "logout" => "sessions#destroy"
 
   resources :users
 
